@@ -112,7 +112,7 @@ Lecture01 Python Basics
 
 ### 10: Let try our first Python program today!
 # This program says hello...
-print('Hello, World')
+print('Hello, 01204111 CPE35/64 students!')
 myName = input('What is your name: ')
 print('It\'s good to meet you, ' + myName)
 print('Length of your name is: ', len(myName))
