@@ -111,6 +111,19 @@ Lecture01 Python Basics
 '''
 
 ### 10: Let try our first Python program today!
+### Version 1 (ref. p.12 textbook Sweigart)
+# This program says hello and asks for my name.
+print('Hello, world!')
+print('What is your name?') # ask for their name
+myName = input()
+print('It is good to meet you, ' + myName)
+print('The length of your name is:')
+print(len(myName))
+print('What is your age?') # ask for their age
+myAge = input()
+print('You will be ' + str(int(myAge) + 1) + ' in a year.')
+
+### Version 2
 # This program says hello...
 print('Hello, 01204111 CPE35/64 students!')
 myName = input('What is your name: ')
