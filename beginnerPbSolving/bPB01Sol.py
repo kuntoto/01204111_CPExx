@@ -1,3 +1,5 @@
+### https://elab.cpe.ku.ac.th/elab/lab/1023/11626/
+
 ## Savings Account
 def calAmount(a, r, y):
   res = a * (1+r/100)**y
