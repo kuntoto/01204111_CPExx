@@ -1,4 +1,4 @@
-import time
+import time, random, copy
 
 # Conway's Game of Life
 import random, time, copy
