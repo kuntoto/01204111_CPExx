@@ -15,7 +15,6 @@ for i in range(n):
 		nameCount[name] = 1
 #print(nameDic)
 #print(nameCount)
-
 nameScore = {}
 myMax, nMax = -999999, ''
 for k,v in nameDic.items():
@@ -64,7 +63,39 @@ def checkMine(b):
               a[p][q] += 1
   return a
 
+## main begins here
 a = [['X','X','X',0],[0,'X',0,0],[0,0,0,'X']]
 printBoard(a)
 b = checkMine(a)
 printBoard(b)
+
+'''
+  รวมลิสย่อย [sumSubList]
+'''
+def sumSubList(s, x, y):
+  lenS = len(s)
+  if (not(-lenS <= x < lenS) and not(-lenS <= y < lenS)):
+    print('x and y Bad Input')
+  elif not(-lenS <= x < lenS):
+  	print('x Bad Input')
+  elif not(-lenS <= y < lenS):
+  	print('y Bad Input')
+  else:
+    if x < 0:
+      x += lenS
+    if y < 0:
+      y += lenS
+    if x > y:
+      return False
+    mySum = sum(s[x:y+1])
+    print(mySum)
+  return True
+
+## main begins here
+s = [int(i) for i in input().split()]
+while True:
+  m = [int(i) for i in input().split()]
+  x, y = m[0], m[1]
+  res = sumSubList(s, x, y)
+  if not res:
+    break
