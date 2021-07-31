@@ -1,3 +1,35 @@
+'''
+  [Exam] สอบกี่ทีไม่ดีขึ้นเลย
+'''
+
+n = int(input('Number of inputs: '))
+nameDic, nameCount = {}, {}
+for i in range(n):
+	name = input('Input name: ')
+	sc = float(input('Input score: '))
+	if name in nameDic.keys():
+		nameDic[name] += sc
+		nameCount[name] += 1
+	else:
+		nameDic[name] = sc
+		nameCount[name] = 1
+#print(nameDic)
+#print(nameCount)
+
+nameScore = {}
+myMax, nMax = -999999, ''
+for k,v in nameDic.items():
+	nameScore[k] = v / nameCount[k]
+	if nameScore[k] > myMax:
+		myMax = nameScore[k]
+		nMax = k
+#print(nameScore, myMax)
+print(f'Top score is {nMax}: {myMax:.2f}')
+
+
+'''
+  [mine_sweeper] แผนที่ระเบิด / just a sample proposal
+'''
 import copy
 
 def printBoard(a):
