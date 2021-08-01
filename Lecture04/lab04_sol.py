@@ -266,3 +266,25 @@ while n < 99999:
     print((n, n+2))
     break
   n += 1
+
+## ระบายสีสนุก1 [Fun Color]
+n = int(input('N : '))
+s = [int(i) for i in input().split()]
+
+oddItems, evenItems = [], []
+for i in range(0,len(s),2):
+  if s[i] != 0:
+    if s[i] not in evenItems:
+      evenItems.append(s[i])
+for i in range(1,len(s),2):
+  if s[i] != 0:
+    if s[i] not in oddItems:
+      oddItems.append(s[i])
+
+#print(f'evenItems: {evenItems}')
+#rint(f'oddItems: {oddItems}')
+
+if (1 in oddItems and 1 in evenItems) or (2 in oddItems and 2 in evenItems) or len(evenItems)>1 or len(oddItems)>1:
+  print('no')
+else:
+  print('yes')
