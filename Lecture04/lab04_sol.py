@@ -282,7 +282,7 @@ for i in range(1,len(s),2):
       oddItems.append(s[i])
 
 #print(f'evenItems: {evenItems}')
-#rint(f'oddItems: {oddItems}')
+#print(f'oddItems: {oddItems}')
 
 if (1 in oddItems and 1 in evenItems) or (2 in oddItems and 2 in evenItems) or len(evenItems)>1 or len(oddItems)>1:
   print('no')
