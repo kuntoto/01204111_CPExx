@@ -1,0 +1,39 @@
+class Card:
+  card = ['3','4','5','6','7','8','9','10','J','Q','K','A','2']
+  score = [3,4,5,6,7,8,9,10,10,10,10,11,2]
+  suit = ['club','diamond','heart','spade']
+  def __init__(self, value, suit):
+    self.value = value
+    self.suit = suit
+
+  def __str__(self):
+    return f'({self.value}, {self.suit})'
+
+  def getScore(self):
+    return Card.score[Card.card.index(self.value)]
+
+  def sum(self, other):
+    return (self.getScore()+other.getScore())%10
+
+  def __lt__(self, rhs):
+    if self.getScore() != rhs.getScore():
+      return self.getScore() < rhs.getScore()
+    else:
+      return Card.suit.index(self.suit) < Card.suit.index(rhs.suit)
+
+## main begins here
+inputCard = ['A spade','K heart','K club','7 diamond','2 spade']
+cards = []
+for i in range(len(inputCard)):
+  j = inputCard[i].split()
+  value, suit = j[0], j[1]
+  cards.append(Card(value, suit))
+
+for i in cards:
+  print(i, i.getScore())
+print()
+for i in range(len(cards)-1):
+  print(cards[i].sum(cards[i+1]))
+print()
+for i in sorted(cards, reverse=True):
+  print(i, i.getScore())
