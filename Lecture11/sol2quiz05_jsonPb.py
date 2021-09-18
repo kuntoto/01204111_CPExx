@@ -43,9 +43,9 @@ def menuThree(ss, p, q, mtype):
         break
   
 def menuFour(ss, p, q, source, status, malSc):
-  p,q = 0,20
-  source, status = 'Manga', 'Finished Airing'
-  malSc = 8
+  #p,q = 0,20
+  #source, status = 'Manga', 'Finished Airing'
+  #malSc = 8
   for i in range(p, q+1):
     try:
       if ss[i]['source'] == source and ss[i]['status'] == status and float(ss[i]['mal_score']) > malSc: 
