@@ -119,6 +119,7 @@ ss = readJsonFile(fname)
 ## Note that we will first observe/filter the corresponding json fields
 ## that can help answering the question, and then develop the step by step
 ## answer to the solution.
+## Ref: https://elab.cpe.ku.ac.th/elab/lab/1023/12027/
 
 #menuOne(ss)
 #menuTwo(ss, 0, 20, 'N')
