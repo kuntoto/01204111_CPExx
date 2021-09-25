@@ -1,8 +1,3 @@
-# จากไฟล์ Cities.csv และ Countries.csv ให้นิสิตเติมโปรแกรมภาษาไพท่อนดังต่อไปนี้ให้สมบูรณ์ (ส่วนที่เป็น ...) 
-# โดยนิสิตสามารถเขียนคลาส ฟังชัน (ก่อน main) และหรือโค๊ด (ในส่วนของ main) เพิ่มเติมเอาได้ 
-# แต่ไม่อนุญาติให้ลบส่วนของโค๊ดที่กำหนดมาให้ (ต้องปรับแก้ ...)
-# หมายเหตุ ถ้าพบการใช้คำสั่ง import ใดๆ จะคิดค่าตรวจ -50% ของคะแนนที่ได้
-
 class City:
   nbCity = 0
   def __init__(s,city,country,lat,long,temp):
@@ -88,11 +83,11 @@ myCountry = readCountry()
 1. From Cities.csv and Countries.csv, show the average tempeture of 
    all countries in EU but no coastline.
 >>> q01(myCity, myCountry)
-Output should be:
 Austria: 6.14
 Czech Republic: 7.86
 Hungary: 9.60
 Slovakia: 8.48
+
 2. From Cities.csv and Countries.csv, out of EU, which country has the
    lowest average city temperature and which country has the highest
    average city temperature.
